@@ -10,4 +10,5 @@ Cenario: Fazer cadastro
 
     Dado que acesso a página de email novamente
     Quando acesso o novo email
-    Então o email de confirmação deve ser apresentado
+    Então o link do email deve ser apresentado para acesso
+    E acesso o cadastro do usuário

@@ -9,7 +9,7 @@ class AcessoPagina
     click_button "Add inboxe"
   end
 
-  def cliqueget
+  def cliquegetnada
     find("option[value='getnada.com']").click
   end
 

@@ -2,12 +2,12 @@ require "capybara"
 require "capybara/cucumber"
 require "faker"
 require "cpf_faker"
-require 'allure-cucumber'
+require "allure-cucumber"
 
 Capybara.configure do |config|
-    config.default_driver = :selenium_chrome
-    #config.default_driver = :selenium
-    config.app_host = "https://getnada.com/"
+  config.default_driver = :selenium_chrome
+  #config.default_driver = :selenium
+  #config.default_max_wait_time = 10
 end
 
 # Allure.configure do |config|

@@ -16,9 +16,11 @@ Quando("submeto meu cadastro completo") do
   find("#email").set email
   find("#contactPhone").set Faker::PhoneNumber.cell_phone
   find("#cnpjNumber").set cnpj
+  #find(:id, "companyName").set Faker::Movie.title
   find(:id, "companyName").set Faker::JapaneseMedia::DragonBall.character
   find(:id, "companyName").send_keys [:space, []]
   find(:id, "companyName").send_keys Faker::Internet.username(specifier: "MultaContrat")
+  #find(:id, "companyName").set Faker::Company.bs
   find(:id, "mailingAddress1").set Faker::Address.street_name
   find(:id, "mailingAddress2").set Faker::Number.decimal_part(digits: 2)
   find(:id, "mailingaddress4").set Faker::Internet.username(specifier: "Sion")
@@ -28,11 +30,12 @@ Quando("submeto meu cadastro completo") do
   find(:id, "mailingZip").set Faker::Internet.username(specifier: "30810-500")
   find("#billingCheck").click
   find(:id, "timeZone").find("option", text: "(GMT-03:00) Brasilia").select_option
-  sleep 20 # para resolver o captcha - como não é possível remover ele nesse acesso.
+  sleep 20 # resolvendo o captche
   find(:id, "i_agree").click
   click_button "Cadastrar"
 
   @cadastro_pagina.cadastrocompleto_1(nome, email, cnpj)
+
 end
 
 Então("devo ser cadastrado e email de confirmação deve chegar") do

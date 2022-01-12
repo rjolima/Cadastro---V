@@ -4,12 +4,28 @@ class CadastroPagina
   include Capybara::DSL
 
   def openvivo
+    # STG CLOUD CO
+    # visit "https://cloudcostg.vivoplataformadigital.com.br/cms/pt#"
+
+    # STG TBRA
+    # visit "https://rsl-stg.vivoplataformadigital.com.br/cms/pt"
+
+    # esteira 2 UAT Cloud CO
+    # visit "https://cloudco-uat-admin.vivoplataformadigital.com.br/cms/pt"
+
+    # Esteira 1 Billing #Tbras
+    #visit "https://rsl-uat-billing.vivoplataformadigital.com.br/cms/pt"
+
     #CloucCO
-    visit "https://www.vivoplataformadigital.com.br"
+    visit "https://cloudco-uat-billing.vivoplataformadigital.com.br"
   end
 
   def cadastro
-    find(:xpath, "//*[@id='block-tb-megamenu-menu-login']/div/div/div/ul/li[2]").click
+    # STG CLOUD CO # STG TBRA
+    #find(:id, "block-tb-megamenu-menu-login").click
+
+    # esteira 2 UAT Cloud CO - Esteira 1 CloudCO / Tbra
+    find(:xpath, "//*[@id='block-tb-megamenu-menu-login']/div/div/div/ul/li[3]").click
   end
 
   def cadastrocompleto
